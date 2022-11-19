@@ -2,7 +2,9 @@
 #include <stdbool.h>
 
 int main(){
-	int n=9;
+	int n;
+	printf("number: ");
+	scanf("%d",&n);
 
 	bool isPrime = 1;
 	if(n == 1){
