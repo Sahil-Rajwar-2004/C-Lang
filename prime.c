@@ -1,20 +1,29 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(){
-	int number;
-	int start=2;
+	int n=9;
 
-	printf("number: ");
-	scanf("%d",&number);
-	while(start<number){
-		if(number%start==0){
-			printf("%d is not prime for %d\n",number,start);
-		}else{
-			printf("%d is prime for %d\n",number,start);
-		}
-		start++;
+	bool isPrime = 1;
+	if(n == 1){
+		printf("%d is a special number\n",n);
 	}
-
+	else if(n == 2){
+		printf("%d is a prime number\n",n);
+	}
+	else if(n != 1|n != 2){
+		for(int i=2;i<n;i++){
+			if(n%i==0){
+				isPrime = 0;
+				break;
+			}
+		}
+		if(isPrime == 0){
+			printf("%d is not a prime number\n",n);
+		}
+		else{
+			printf("%d is a prime number\n",n);
+		}
+	}
 	return 0;
 }
-
