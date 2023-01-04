@@ -5,8 +5,8 @@ int main(){
 	scanf("%d %d",&n,&range);
 	
 	for(int i=0;i<range;i++){
-		res = n*range;
-		printf("%d x %d = %d\n",n,range,res);
+		res = n*i;
+		printf("%d x %d = %d\n",n,i,res);
 	}
 
 	return 0;
